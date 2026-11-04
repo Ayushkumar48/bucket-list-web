@@ -1,6 +1,53 @@
 {
 	"version": 1,
 	"items": {
+		"https://baby-ui.pages.dev/svelte/r/avatar.json": {
+			"name": "avatar",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T16:35:38.504Z",
+			"itemHash": "86aed8266acf490e0819b084032e50cefc8caeb0e60f453beb79a7915cab893f",
+			"files": {
+				"src/lib/components/ui/avatar/avatar-badge.svelte": "0ac909c782c5e918e4b16fba6fee04cf44213268268ea9cd22609ba8a1c7bbd8",
+				"src/lib/components/ui/avatar/avatar-fallback.svelte": "1976b2993d8f3fd2e248b71d082679f8d9edf84c4118b021319b88d0bcb86d54",
+				"src/lib/components/ui/avatar/avatar-group-count.svelte": "bd5ccfe7ab557d3f8a7e5b23009666f05d8e434078edf894828438852a8bf147",
+				"src/lib/components/ui/avatar/avatar-group.svelte": "2f3ea3c7e621dacbb3cadbea1faa5d85017f46c90af77d155703a61a47458867",
+				"src/lib/components/ui/avatar/avatar-image.svelte": "6e223adaca4c319df271da7f3133850a36c7cf3089d9591f9bdc0fef727bc1fb",
+				"src/lib/components/ui/avatar/avatar.svelte": "8e26537b125bf36643ed48860a245cdb498c8f2af67e66faed850cce32d469d8",
+				"src/lib/components/ui/avatar/context.ts": "01a6071bb744559c9806d290c83aea5c9cd42c9bd8c5fdb2c3162407b242ca78",
+				"src/lib/components/ui/avatar/index.ts": "8a4fe6e2dbf953608968676d8efa7f957ba12cb04ce3872df132af7028648d61",
+				"src/lib/components/ui/avatar/variants.ts": "dabf0c2ecb36cd5fd63a740722d8b60bbb128bcaffeda43638e71b25d2eabbe6"
+			},
+			"dependencies": [
+				"bits-ui",
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
+		"https://baby-ui.pages.dev/svelte/r/badge.json": {
+			"name": "badge",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T16:35:38.505Z",
+			"itemHash": "0e694c0af042d351a26ac5455c15d2643e298f1b4b44c97b9c447608e22cc205",
+			"files": {
+				"src/lib/components/ui/badge/badge.svelte": "d79fd6af099336efe97df46d739a918eac1455364df6d99919e18f01a569dc19",
+				"src/lib/components/ui/badge/index.ts": "8ed7804b01f989b4d7b70461c736791249443687e89df2ff8b0ba1f8f837650b",
+				"src/lib/components/ui/badge/variants.ts": "4aa2a87f66b65e7af1302e94866c4f390bce19d45afddc8943d50fd4c8da0f8b"
+			},
+			"dependencies": [
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
 		"https://baby-ui.pages.dev/svelte/r/button.json": {
 			"name": "button",
 			"type": "registry:ui",
@@ -43,6 +90,40 @@
 				"https://baby-ui.pages.dev/svelte/r/tokens.json"
 			]
 		},
+		"https://baby-ui.pages.dev/svelte/r/dropdown-menu.json": {
+			"name": "dropdown-menu",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T16:35:38.505Z",
+			"itemHash": "f88d636ac2d14d90be04bf80a65361394d58867ae13f600de3e334e55f3aadf5",
+			"files": {
+				"src/lib/anchor.ts": "ee6a400672d75cf4c257a823108006ae666e45873e05add270d7cbad68e1283c",
+				"src/lib/anchored-surface.ts": "3fb3b6cfd87464ff66e7bc62722ecb1c47f949a1b0e50153b6b78a520c954968",
+				"src/lib/components/ui/dropdown-menu/context.ts": "f03a4878db70e49eff858fa495225ba26fad5e9955856f5df121c01b4cb16d89",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-checkbox-item.svelte": "5735f63e092ac08f53f788338f6e76734043c3f419e313332e93b3c7a3a29859",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-content.svelte": "c96dced7d307038fad5ec9ffd5498b3cc471c6082e819d06b5f96c629d0dea73",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-item.svelte": "812eefba1279baf6cfc3b89354b529c75a68c5bcf81b0b72a156d07117c10383",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-label.svelte": "2a179062db77f14490880c810eda825e9ed6a6e019175d9004cece5dd0e29e62",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-separator.svelte": "25187c4afa4894bcb49f8c6bb51bac412e7404dab9ed22aecfec8210b6c15d03",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-shortcut.svelte": "7736a535fcd45ae28f2ac3ad580f6b0f3a42c609bf3c4f6540fd51240889782e",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-sub-content.svelte": "31400baa4a54d5c81e864e698ccd9fb5fdf842e05d83a6dc66d6cb5aa3452dbf",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-sub-trigger.svelte": "7d5468618c7e6e64c449e015e09239f29346bc2f1bbd657cd9733af76eabe658",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-sub.svelte": "096619e3777a411ee85cba956a05ce621ddcf320b37f990ec97df48def9c8210",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu-trigger.svelte": "a5eee013901a7ffd016840cf24fb3c3812e870c732786f18dc6a4aa1c7813736",
+				"src/lib/components/ui/dropdown-menu/dropdown-menu.svelte": "2fd25794b573adc2b093b7d500c04a32150a3a29e055075c297cd1ae895134a7",
+				"src/lib/components/ui/dropdown-menu/index.ts": "9e521dcdc33efc3873ee166916d1acad1dc9676163d86c3708c47ac536af9cf3",
+				"src/lib/menu.ts": "ba32ef01b59644f8429265143699d70e8ded9b2123e07407408875e671b7cc59"
+			},
+			"dependencies": [
+				"bits-ui",
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
 		"https://baby-ui.pages.dev/svelte/r/mega-navbar.json": {
 			"name": "mega-navbar",
 			"type": "registry:ui",
@@ -69,6 +150,28 @@
 				"https://baby-ui.pages.dev/svelte/r/collapsible.json",
 				"https://baby-ui.pages.dev/svelte/r/notched-shelf.json",
 				"https://baby-ui.pages.dev/svelte/r/sheet.json",
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
+		"https://baby-ui.pages.dev/svelte/r/mention-input.json": {
+			"name": "mention-input",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T16:35:38.505Z",
+			"itemHash": "4277e46d07048d3958625eb7972fcb74cf0eeb7bb1f0b535b0c176c61cca131f",
+			"files": {
+				"src/lib/components/ui/mention-input/index.ts": "9f3c7c4f27d13b840650c40a3e58145b86a50ae5f69d7cf0dfc1182d91f6bd40",
+				"src/lib/components/ui/mention-input/mention-input.svelte": "bb8d6c28b015beefbce0350bf5677c633e80a0e39a830c70ca27da804597b52e",
+				"src/lib/components/ui/mention-input/mention.ts": "5ec394d0a5f1ffb1674da612ccf98819a3d620d3483f981fe828ad12b25cd11b",
+				"src/lib/components/ui/mention-input/variants.ts": "72f79b2895acc4b5dbdaf8c67c20b10009933061d0d192f4559857371957c2f5"
+			},
+			"dependencies": [
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/avatar.json",
 				"https://baby-ui.pages.dev/svelte/r/tokens.json"
 			]
 		},
@@ -113,6 +216,27 @@
 			},
 			"dependencies": [
 				"bits-ui",
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
+		"https://baby-ui.pages.dev/svelte/r/spinner.json": {
+			"name": "spinner",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T16:35:38.506Z",
+			"itemHash": "7ef6416370bae8f212eb31462d00aa73ad900c86a1f5c140e02c37368e49941d",
+			"files": {
+				"src/lib/cn.ts": "0fca478853f3fc4310e40ebff727a53da7ec677938f4e3e0d5ecaa62e936a199",
+				"src/lib/components/ui/spinner/index.ts": "eb26b4c21b0bb146ab2e66564780775895c2679e806e2cb1b66637a66defb68b",
+				"src/lib/components/ui/spinner/spinner.svelte": "1cf05cceaf9b8cb72d57016615308d5cc7a8fa646e5f417f2631648c89b644bb",
+				"src/lib/components/ui/spinner/variants.ts": "bf1d45f88e1a6c45f6da0b27435ce10ff0be0f83adfb641b32cb679160590e07"
+			},
+			"dependencies": [
 				"clsx",
 				"tailwind-merge",
 				"tailwind-variants"
@@ -190,6 +314,32 @@
 			"files": {},
 			"dependencies": [],
 			"registryDependencies": []
+		},
+		"https://baby-ui.pages.dev/svelte/r/user-menu.json": {
+			"name": "user-menu",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T16:35:38.504Z",
+			"itemHash": "dd32c06006fa571bd271f17ad382e6ff14387e85365991b1a3aabbe6b741a9c7",
+			"files": {
+				"src/lib/components/ui/user-menu/account.ts": "e8f3d32bb459da362bafd6935ecd339259d1f3843bb8ed1f5afe7dcaf8a7c83a",
+				"src/lib/components/ui/user-menu/index.ts": "e6b101f78c83174a622d2707bee7fc39c4af95f1166bec9bbbd8845ff43a9392",
+				"src/lib/components/ui/user-menu/user-menu.svelte": "7c029ae3f2479c3cd0abbb5bb04fcb7133514aa0b9833bd07c66d50b2aa24f19",
+				"src/lib/components/ui/user-menu/variants.ts": "2f0945e47ecd6118f9b69db4fd134cd401605fc1a630e56b383cd48af2f687fc"
+			},
+			"dependencies": [
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/avatar.json",
+				"https://baby-ui.pages.dev/svelte/r/badge.json",
+				"https://baby-ui.pages.dev/svelte/r/dropdown-menu.json",
+				"https://baby-ui.pages.dev/svelte/r/mention-input.json",
+				"https://baby-ui.pages.dev/svelte/r/spinner.json",
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
 		}
 	}
 }

@@ -32,7 +32,7 @@
 		icon?: Snippet<[{ theme: ThemeToggleValue; isDark: boolean }]>;
 	} = $props();
 
-	// svelte-ignore state_referenced_locally -- intentional one-time seed, matching React's useState(initialValue)
+	// svelte-ignore state_referenced_locally
 	let internalTheme = $state(defaultTheme);
 	const theme = $derived(themeProp ?? appTheme.value ?? internalTheme);
 	const isDark = $derived(theme === 'dark');
