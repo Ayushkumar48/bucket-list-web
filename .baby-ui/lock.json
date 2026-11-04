@@ -124,6 +124,84 @@
 				"https://baby-ui.pages.dev/svelte/r/tokens.json"
 			]
 		},
+		"https://baby-ui.pages.dev/svelte/r/input.json": {
+			"name": "input",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T17:51:43.685Z",
+			"itemHash": "e15cd59cb6f9a1df75be43754bc99401450975bb1b0947a00a1eb3dad34c1c64",
+			"files": {
+				"src/lib/components/ui/input/index.ts": "98c55aa4849c065bbd24aba83c9cd754c9f6b23e84333adec90d9214e5a7f708",
+				"src/lib/components/ui/input/input.svelte": "6371fde2de39da2b95c8ef1bdfa6700710314e4e21014673e45cad406ab308e6",
+				"src/lib/components/ui/input/variants.ts": "e731b343936d1766ed16373e0fc441f7c835a77d09016d8069767243beaef5f2",
+				"src/lib/control.ts": "6651c5c33695c4cff0bb3416216e7006ed696724e413160f31460cd97bb67ca6"
+			},
+			"dependencies": [
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
+		"https://baby-ui.pages.dev/svelte/r/label.json": {
+			"name": "label",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T17:51:43.685Z",
+			"itemHash": "1465ebfc28a9af3a6e07e77946b5a176af8b45fc71358cb7b629eb16e30a2e3c",
+			"files": {
+				"src/lib/cn.ts": "0fca478853f3fc4310e40ebff727a53da7ec677938f4e3e0d5ecaa62e936a199",
+				"src/lib/components/ui/label/index.ts": "47c9033728e9f29ec995cc6f3a200295b679f663e8c0eaea05933862ba4cd801",
+				"src/lib/components/ui/label/label.svelte": "4e26855dab5e94574fd4fd90d43bd51629c43ddda6b0d389db8567bd9325d21c"
+			},
+			"dependencies": [
+				"clsx",
+				"tailwind-merge"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
+		"https://baby-ui.pages.dev/svelte/r/magic-link-login.json": {
+			"name": "magic-link-login",
+			"type": "registry:ui",
+			"framework": "svelte",
+			"installedAt": "2026-11-04T17:51:43.684Z",
+			"itemHash": "c23ad2dc4c13a2040467c79c713abf4974fa43a378aa1dea163c62c36e6e26f3",
+			"files": {
+				"src/lib/components/blocks/magic-link-login/context.ts": "9694c88d778b328130756ce9269e8d89afcc81b5162a09d1bfbd8ea7867a55f1",
+				"src/lib/components/blocks/magic-link-login/index.ts": "4ac9aef2804ea52fdc619f3e5567eddf25386d4a30c1f48c77b3961e576d274c",
+				"src/lib/components/blocks/magic-link-login/magic-link-core.ts": "e35e0e4aebfb6f5181f018cea31cc757fb7d8bc506a89e1f4259fe71de6467c5",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-aside.svelte": "e09b26732bc40fc3584effec907f569e6253037e0ad16706569218076f5a3c60",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-brand.svelte": "4d7ce2f0158bc6ddfa4a5d0d9153c408354e434dc2906a0e5166a6613cd6f805",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-email.svelte": "782b44c4e4e89403c45914c58182c681db04c4d717526bcb88989a4ecd0b3fac",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-form.svelte": "3236b44aaacaa9743fc42dbe7c868c10f68278217a95c74a40d1850ef47651f1",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-header.svelte": "4f2825135a7c8f92e01c48b38fed8be77e9d95ab9e7f15a9c17ddbc9a73b5e57",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-inbox.svelte": "a0c93de865793d59f34ec8caf54401531f4b93786fb06acf6dfabd229a2406d1",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-legal.svelte": "467cb57a2e034a4503e925763161a7f1a309e423fbebad618760c1d9146ded7e",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-panel.svelte": "26fef9aa169d2e5429ae7257ec67bf142d3108c44c32bca9fafb008b19423d69",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-providers.svelte": "918548cc4cb400d872aca665bdce2404dbc819aaad404bd27f503a65f6b76cc3",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-resend.svelte": "ad9bb3c0422b90e210da2beed3ab9473d63f75299341131bd3be2346d6d2baeb",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-sent-header.svelte": "93105859a859ab162fb1266471bdab783e622111b0d66faf0881f7b1cbdb4ca4",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-sent.svelte": "6b6f687c9e3138db8c9611c45386972d90786fbd268344c2cd56bc55aab28229",
+				"src/lib/components/blocks/magic-link-login/magic-link-login-views.svelte": "8971d584c1403526cbf811b64cdcf0c842d4e1d7dad28ea483d50dcd26e7166b",
+				"src/lib/components/blocks/magic-link-login/magic-link-login.svelte": "baacdb0f352d1072a76ecd7d4205cf4cc7ec06a1bbb2d79103f06753dba1b1ef",
+				"src/lib/components/blocks/magic-link-login/variants.ts": "5e3f80524fe7f3880fd60c27ba1081f6b340549604a630ba1a8650f22bdb4ca9"
+			},
+			"dependencies": [
+				"clsx",
+				"tailwind-merge",
+				"tailwind-variants"
+			],
+			"registryDependencies": [
+				"https://baby-ui.pages.dev/svelte/r/button.json",
+				"https://baby-ui.pages.dev/svelte/r/input.json",
+				"https://baby-ui.pages.dev/svelte/r/label.json",
+				"https://baby-ui.pages.dev/svelte/r/tokens.json"
+			]
+		},
 		"https://baby-ui.pages.dev/svelte/r/mega-navbar.json": {
 			"name": "mega-navbar",
 			"type": "registry:ui",
