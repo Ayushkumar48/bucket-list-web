@@ -3,6 +3,11 @@
 	import { UserMenu } from '#lib/components/ui/user-menu/index.js';
 	import { resolve } from '$app/paths';
 	import { ThemeToggle } from '#lib/components/ui/theme-toggle/index.js';
+	import { goto } from '$app/navigation';
+	import {
+		NotificationCenter,
+		type NotificationItem
+	} from '#lib/components/ui/notification-center/index.js';
 
 	// const groups: MegaMenuGroup[] = [
 	// 	{
@@ -22,10 +27,16 @@
 		{ label: 'My Feed', href: '/feed' }
 	];
 	let pointerInsideNavbar = $state(false);
+	let items = $state<NotificationItem[]>([
+		{ id: '1', title: 'Deploy finished', time: '2m', tone: 'success' }
+	]);
 	let navbarFocused = $state(false);
 	let userMenuOpen = $state(false);
+	let notificationCenterOpen = $state(false);
 	let { children } = $props();
-	const navbarExpanded = $derived(pointerInsideNavbar || navbarFocused || userMenuOpen);
+	const navbarExpanded = $derived(
+		pointerInsideNavbar || navbarFocused || userMenuOpen || notificationCenterOpen
+	);
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -58,15 +69,27 @@
 			{links}
 		>
 			{#snippet brand()}
-				<a class="font-semibold text-foreground" href={resolve('/(main)/lists')}> Bucket List </a>
+				<a class="font-semibold text-foreground" href={resolve('/(main)/lists')}>
+					<h1>Bucket List</h1>
+				</a>
 			{/snippet}
 			{#snippet actions()}
-				<ThemeToggle variant="circle-blur" />
+				<ThemeToggle variant="circle-blur" class="mr-2" />
+				<NotificationCenter bind:notifications={items} bind:open={notificationCenterOpen} />
 
 				<UserMenu
 					bind:open={userMenuOpen}
 					user={{ name: 'Sam Rivera', email: 'sam@acme.dev' }}
-					items={[{ label: 'Settings', shortcut: '⌘,' }]}
+					items={[
+						{
+							label: 'Saved',
+							onSelect: () => goto(resolve('/(main)/saved'))
+						},
+						{
+							label: 'Settings',
+							onSelect: () => goto(resolve('/(main)/settings'))
+						}
+					]}
 					onSignOut={() => fetch('/logout', { method: 'POST' })}
 				/>
 			{/snippet}
