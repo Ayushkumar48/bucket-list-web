@@ -1,62 +1,39 @@
 <script lang="ts">
-import Button from "#lib/components/ui/button/button.svelte";
-import Input from "#lib/components/ui/input/input.svelte";
-import Label from "#lib/components/ui/label/label.svelte";
-import { cn } from "#lib/cn.js";
-import { isValidEmail } from "./magic-link-core";
-import { magicLinkLoginState } from "./context";
+	import type { RemoteForm } from '$app/server';
+	import { toast } from '#lib/components/ui/toast/index.js';
+	import Button from '#lib/components/ui/button/button.svelte';
+	import Label from '#lib/components/ui/label/label.svelte';
+	import Input from '#lib/components/ui/input/input.svelte';
 
-let {
-	onSubmit,
-	class: classProp,
-}: { onSubmit: (email: string) => void; class?: string } = $props();
-
-const ctx = magicLinkLoginState("MagicLinkLoginEmail");
-const sending = $derived(ctx.status === "sending");
-const shown = $derived(ctx.message !== undefined && ctx.view === "form");
-
-function submit(event: SubmitEvent) {
-	event.preventDefault();
-	if (sending) return;
-	if (!isValidEmail(ctx.address)) {
-		ctx.setInvalid(true);
-		document.getElementById(ctx.inputId)?.focus();
-		return;
-	}
-	onSubmit(ctx.address);
-}
+	let { form }: { form: RemoteForm<{ email: string }, unknown> } = $props();
 </script>
 
-<!-- The email field and submit; a bad address or server error folds open under the field. -->
-<form class={cn(ctx.styles.form(), classProp)} novalidate onsubmit={submit}>
-	<div class={ctx.styles.field()}>
-		<Label for={ctx.inputId}>{ctx.labels.email}</Label>
+<form
+	{...form.enhance(async (form) => {
+		try {
+			if (await form.submit()) {
+				toast.success('Sign-in link sent. Check your inbox.');
+			}
+		} catch (error: unknown) {
+			toast.error(error instanceof Error ? error.message : 'Failed to send magic link.');
+		}
+	})}
+	class="space-y-4"
+>
+	<div class="space-y-1.5">
+		<Label for="email">Email</Label>
 		<Input
-			id={ctx.inputId}
-			name="email"
-			type="email"
-			inputmode="email"
+			{...form.fields.email.as('email')}
+			id="email"
 			autocomplete="email"
-			autocapitalize="none"
-			spellcheck={false}
-			placeholder={ctx.labels.placeholder}
-			bind:value={() => ctx.email, ctx.setEmail}
-			invalid={shown}
-			aria-describedby={shown ? ctx.errorId : undefined}
-			readonly={sending}
+			placeholder="you@example.com"
 		/>
-		<div data-open={shown} class={ctx.styles.fold()}>
-			<p id={ctx.errorId} class={ctx.styles.clip()} aria-hidden={!shown}>
-				<span class={ctx.styles.error()}>{ctx.message}</span>
-			</p>
-		</div>
+		{#each form.fields.email.issues() ?? [] as issue (issue)}
+			<p class="text-xs text-destructive-strong">{issue.message}</p>
+		{/each}
 	</div>
-	<Button
-		type="submit"
-		class={ctx.styles.submit()}
-		loading={sending}
-		loadingLabel={ctx.labels.sending}
-	>
-		{ctx.labels.submit}
+
+	<Button type="submit" class="w-full" loading={Boolean(form.pending)} loadingLabel="Sending link">
+		Email me a sign-in link
 	</Button>
 </form>

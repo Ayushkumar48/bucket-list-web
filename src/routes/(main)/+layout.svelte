@@ -8,6 +8,7 @@
 		NotificationCenter,
 		type NotificationItem
 	} from '#lib/components/ui/notification-center/index.js';
+	import type { LayoutProps } from './$types';
 
 	// const groups: MegaMenuGroup[] = [
 	// 	{
@@ -33,7 +34,7 @@
 	let navbarFocused = $state(false);
 	let userMenuOpen = $state(false);
 	let notificationCenterOpen = $state(false);
-	let { children } = $props();
+	let { children, data }: LayoutProps = $props();
 	const navbarExpanded = $derived(
 		pointerInsideNavbar || navbarFocused || userMenuOpen || notificationCenterOpen
 	);
@@ -79,7 +80,7 @@
 
 				<UserMenu
 					bind:open={userMenuOpen}
-					user={{ name: 'Sam Rivera', email: 'sam@acme.dev' }}
+					user={{ name: data.user.name ?? data.user.email, email: data.user.email }}
 					items={[
 						{
 							label: 'Saved',
